@@ -57,7 +57,6 @@ final_contacts_list = list(contacts_dict.values())
 pprint(final_contacts_list)
 
 # код для записи файла в формате CSV
-with open("phonebook.csv", "w", encoding="utf-8") as f:
-  datawriter = csv.writer(f, delimiter=',')
-  # Вместо contacts_list подставьте свой список
-  datawriter.writerows(contacts_list)
+with open("phonebook.csv", "w", encoding="utf-8", newline="") as f:
+    datawriter = csv.writer(f, delimiter=',')
+    datawriter.writerows(final_contacts_list)
